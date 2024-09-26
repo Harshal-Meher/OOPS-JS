@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+    <script>
+        /*
+        class is a declaration of data member and defination of member function.
+        
+        */
+       class Myclass {
+        //declaration of datamembers or veriables
+
+        name = 'Harshal';
+        sname = 'Meher';
+
+        //defination of member functions
+
+        constructor (name,sname) {
+            this.name=name;
+            this.sname=sname;
+            console.log(this.name+"  "+this.sname);
+        }
+        // show(name,sname) {
+        //     this.name=name;
+        //     this.sname=sname;
+        //     console.log(this.name+"  "+this.sname);
+        // }
+       }
+
+       var obj = new Myclass('Ram','Sharma');
+    //    obj.show('Roshan','Dorkhande');
+    //    console.log("Name  : ",obj.name + " "+obj.sname);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

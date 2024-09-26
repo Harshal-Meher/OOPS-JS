@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Sim {
+            //datamember
+            sim_type ='5G'
+            sim_services = ['Broadband','Videocalling','Roaming'];
+
+
+            //memberfuction
+            calling() {//base class
+                console.log('Sim card provided services are : ');
+
+                this.sim_services.forEach((ele) => {
+                    console.log(ele);
+                });
+
+            }           
+        }
+        class Airtel extends Sim {
+             messaging() {//derived class
+                console.log('Airtail provides '+this.sim_type+ " services ")
+
+            }
+        }
+
+        class BSNL extends Airtel {
+            static sim_type ='4G';
+
+            messaging() {//derived class
+                console.log('BSNL provides '+BSNL.sim_type+ " services ")
+
+            }
+        }
+
+        var obj = new Sim();
+        obj.calling();
+        obj_airtel = new Airtel();
+        obj_airtel.messaging();
+        obj_BSNL =new BSNL();
+        obj_BSNL.messaging();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
